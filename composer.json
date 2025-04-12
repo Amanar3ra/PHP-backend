@@ -1,5 +1,6 @@
 {
     "name": "amanarora/php-backend",
+    "description": "composer.json",
     "type": "library",
     "require": {
         "phpunit/phpunit": "^11.5"
