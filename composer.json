@@ -1,0 +1,11 @@
+{
+    "name": "amanarora/php-backend",
+    "type": "library",
+    "require": {
+        "phpunit/phpunit": "^11.5"
+    },
+    "require-dev": {
+        "phpunit/php-timer": "^7.0",
+        "php": "^8.2"
+    }
+}
