@@ -1,10 +1,6 @@
 <?php
-// Display all PHP errors
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
-// config.php - Database configuration
+//Database configuration
 $host = 'localhost';
 $username = 'root';
 $password = '';
@@ -28,7 +24,7 @@ try {
         password VARCHAR(255) NOT NULL,
         name VARCHAR(100) NOT NULL,
         email VARCHAR(100) NOT NULL,
-        role VARCHAR(20) DEFAULT 'user',
+        role VARCHAR(20) DEFAULT 'user'
     )");
     
     // Insert admin user if not exists

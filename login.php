@@ -22,19 +22,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             $stmt->bindParam(":username", $username, PDO::PARAM_STR);
             if($stmt->execute()) {
-                // Check if username exists
                 if($stmt->rowCount() == 1) {
-                    // Fetch result
                     $row = $stmt->fetch();
-                    
-                    // Verify password
-                    if(password_verify($password, $row["password"])) {
 
+                    if(password_verify($password, $row["password"])) {
                         $_SESSION["loggedin"] = true;
                         $_SESSION["id"] = $row["id"];
                         $_SESSION["username"] = $row["username"];
                         $_SESSION["role"] = $row["role"];
-
+                        
                         header("location: dashboard.php");
                         exit;
                     } else {
